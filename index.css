@@ -1,0 +1,898 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+* {
+  box-sizing: border-box !important;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  font-family: Ubuntu;
+  margin: 0;
+}
+
+.white-footer {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.tono-alto-principal {
+  color: #ff64c4 !important;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em 0 1em 2em;
+  background-color: #f2edec;
+}
+
+.columna-principal {
+  max-width: 1024px;
+  /*antes 1225px*/
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.menu-principal {
+  background-color: #560029;
+  position: relative;
+  /*& li:last-child:after:hover{
+		border-left:1px solid rgba(#fff, 0);
+	}*/
+}
+
+.menu-principal ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  width: 754px;
+  overflow: hidden;
+}
+
+.menu-principal li:last-child:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1.5em;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: .3em;
+  right: 0;
+}
+
+.menu-principal li, .menu-principal li a {
+  width: 25%;
+}
+
+.menu-principal li {
+  box-sizing: border-box;
+  float: left;
+  -webkit-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+  position: relative;
+}
+
+.menu-principal li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 100%;
+  line-height: 1.5em;
+  margin: 0.3em 0 0.3em 0;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.menu-principal li:hover {
+  background: #ff64c4;
+  -webkit-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+}
+
+.menu-principal li:hover a {
+  border-left: 1px solid rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  margin-left: -.3em;
+}
+
+.logo-cabecera {
+  cursor: pointer;
+  width: 196px;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.logo-cabecera:hover {
+  -webkit-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in;
+  margin-left: .8em;
+}
+
+.columnas-footer:nth-child(3) p:before {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: 1em;
+  margin-bottom: .3em;
+}
+
+.logo-footer {
+  width: 163px;
+  display: block;
+  margin: 0 auto;
+}
+
+.nuevo {
+  width: 3em;
+  background: #8c024a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nuevo p {
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+  font-size: 1.6em;
+  color: #fff;
+  margin-top: 20%;
+}
+
+.contenedor_banner {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.texto-banner-contenedor {
+  position: absolute;
+  top: 4em;
+  left: 5em;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 3em;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.texto-banner-contenedor-movil {
+  position: relative;
+  display: none;
+  background: #550028;
+  padding: 3em;
+  text-align: center;
+  top: -7px;
+  line-height: 1.4;
+  margin: 0 auto;
+}
+
+.texto-banner-contenedor-movil > span.banner_texto_normal {
+  color: #ff64c4;
+}
+
+.texto-banner-contenedor-movil > span.banner_texto_resaltado {
+  color: white !important;
+}
+
+.banner_texto_resaltado {
+  color: #8c024a;
+  font-size: 1.6em;
+}
+
+.banner_texto_normal, .titulo-destacados {
+  color: #2d0018;
+  font-size: 1.4em;
+}
+
+.destacados {
+  padding-top: 1.5em;
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 1.5em;
+}
+
+.contenedor-texto-destacados {
+  box-sizing: border-box;
+  width: 40%;
+  padding-right: 1.5em;
+  float: left;
+}
+
+.contenedor-imagen-destacados {
+  box-sizing: border-box;
+  width: 20%;
+  background: #560029;
+  overflow: hidden;
+  float: left;
+  padding: 3.5%;
+  position: relative;
+  cursor: pointer;
+}
+
+.contenedor-imagen-destacados:nth-child(2) {
+  background: #8c024a;
+}
+
+.text-favoritos {
+  /*font-weight: bold;*/
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  display: block;
+  top: 30%;
+  left: 2%;
+  z-index: 9;
+  opacity: 0;
+}
+
+.contenedor-icon {
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+  -webkit-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+}
+
+.contenedor-icon:after {
+  -webkit-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  background: rgba(255, 100, 196, 0);
+  /*acá tenías este $claro-enfasis*/
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+}
+
+.contenedor-icon:hover {
+  -webkit-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+  background: #ff64c4;
+}
+
+.contenedor-icon:hover:after {
+  -webkit-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in;
+  background: #ff64c4;
+  /*acá tenías este $claro-enfasis*/
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+}
+
+.contenedor-icon:hover .icon-iconos-01:before {
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-out;
+          transition: all 0.6s ease-out;
+}
+
+.contenedor-icon:hover .text-favoritos {
+  -webkit-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+  opacity: 1;
+}
+
+.contenedor-icon:before {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+}
+
+.contenedor-icon:hover:before {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background: #E2117E;
+  /*iba este rgba(255, 255, 255, 0.18)*/
+}
+
+.resalt-destacados {
+  color: #8c024a;
+}
+
+.resalt-destacados:after {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: 1px;
+  background: #8c024a;
+  margin-top: .4em;
+  margin-bottom: .3em;
+}
+
+.resalt-footer {
+  color: #8c024a;
+}
+
+.resalt-footer:after {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: .4em;
+  margin-bottom: .3em;
+}
+
+.footer-contenedor {
+  background: #222222;
+  padding-top: 1.5em;
+  clear: both;
+  position: relative;
+}
+
+.copy-right {
+  text-align: center;
+  background: #161616;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 2em;
+  position: relative;
+  bottom: -1em;
+  width: 100%;
+}
+
+.columnas-footer {
+  width: 33.33%;
+  float: left;
+}
+
+.columnas-footer:nth-child(2) {
+  text-align: center;
+}
+
+.columnas-footer p {
+  width: 156px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fast-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.fast-nav li {
+  list-style: none;
+}
+
+.fast-nav li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.imgbanner {
+  width: auto !important;
+  height: 400px;
+  position: relative;
+  left: -130%;
+}
+
+.color-icons {
+  color: #ff64c4;
+  text-align: center;
+}
+
+.icon-iconos-01:before {
+  display: block;
+  font-size: 2.7em;
+  padding-top: 21%;
+}
+
+.icon-iconos-02:before {
+  display: block;
+  font-size: 1.5em;
+  padding-top: 36%;
+}
+
+.icon-iconos-03:before {
+  display: block;
+  font-size: 2.7em;
+  padding-top: 21%;
+}
+
+@media all and (min-width: 390px) {
+  .imgbanner {
+    width: auto !important;
+    height: 400px;
+    position: relative;
+    left: -90%;
+  }
+  .icon-iconos-01:before {
+    font-size: 3.5em;
+  }
+  .icon-iconos-02:before {
+    font-size: 2.3em;
+  }
+  .icon-iconos-03:before {
+    font-size: 3.5em;
+  }
+  .text-favoritos {
+    /*font-weight: bold;*/
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: block;
+    top: 40%;
+    left: 2%;
+    z-index: 9;
+    opacity: 0;
+  }
+}
+
+@media all and (min-width: 460px) {
+  .imgbanner {
+    width: auto !important;
+    height: 400px;
+    position: relative;
+    left: -60%;
+  }
+  .icon-iconos-01:before {
+    font-size: 3.5em;
+  }
+  .icon-iconos-02:before {
+    font-size: 2.6em;
+    padding-top: 35%;
+  }
+  .icon-iconos-03:before {
+    font-size: 3.5em;
+  }
+}
+
+@media all and (min-width: 670px) {
+  .imgbanner {
+    width: auto !important;
+    height: 400px;
+    position: relative;
+    left: -9%;
+  }
+  .icon-iconos-01:before {
+    font-size: 4em;
+    padding-top: 28%;
+  }
+  .icon-iconos-02:before {
+    font-size: 3.3em;
+    padding-top: 34%;
+  }
+  .icon-iconos-03:before {
+    font-size: 4em;
+    padding-top: 28%;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .hamburger {
+    display: none !important;
+  }
+  .imgbanner {
+    width: auto !important;
+    height: 400px;
+    position: relative;
+    left: 0;
+  }
+  .icon-iconos-01:before {
+    font-size: 4em;
+    padding-top: 20%;
+  }
+  .icon-iconos-02:before {
+    font-size: 2.3em;
+    padding-top: 34%;
+  }
+  .icon-iconos-03:before {
+    font-size: 4em;
+    padding-top: 20%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .imgbanner {
+    left: -9.5%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .texto-banner-contenedor {
+    top: 10%;
+    padding: 2em;
+    height: 80%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  body {
+    padding: 3.8em 0 0 0;
+    line-height: 20pt;
+  }
+  .logo-cabecera {
+    width: 155px;
+  }
+  .texto-banner-contenedor .banner_texto_normal:nth-child(1) br:nth-child(1) {
+    display: none;
+  }
+  .contenedor_banner {
+    margin-top: 0;
+  }
+  .texto-banner-contenedor {
+    padding: 1.5em;
+    height: auto;
+  }
+  header {
+    border-bottom: 5px solid #560029;
+    padding: 0.8em 1.5em 0.3em 0.5em;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+  }
+  .menu-principal ul {
+    border-left: 10px solid rgba(242, 237, 236, 0.54);
+    -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+    background: #8c024a;
+    position: fixed;
+    overflow: auto;
+    z-index: 100;
+    width: 75%;
+    height: 100vh;
+    right: -75%;
+    top: 3.8em;
+  }
+  .menu-principal ul li {
+    clear: both;
+  }
+  .menu-principal ul li a, .menu-principal ul li {
+    width: 100%;
+  }
+  .contenedor-texto-destacados {
+    width: 100%;
+    padding-right: 0em;
+    clear: both;
+  }
+  .contenedor-total-iconos-destacados {
+    margin: 0 auto;
+    width: 85%;
+    overflow: hidden;
+    padding-top: 1.5em;
+  }
+  .contenedor-imagen-destacados {
+    width: 33.33%;
+  }
+  .columnas-footer {
+    width: 50%;
+    text-align: center;
+  }
+  .columnas-footer:nth-child(1) {
+    display: none;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .columnas-footer {
+    width: 100%;
+    clear: both;
+  }
+  .contenedor-total-iconos-destacados {
+    margin: 0 auto;
+    width: 95%;
+    overflow: hidden;
+    padding-top: 1.5em;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .texto-banner-contenedor {
+    display: none;
+  }
+  .texto-banner-contenedor-movil {
+    display: block;
+  }
+}
+
+.inputs, .textodearea {
+  border-style: none;
+  border-radius: .4em;
+  padding: .5em;
+  display: block;
+  margin: 0 auto 0.5em auto;
+}
+
+.slideToggle {
+  right: 0 !important;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  position: fixed;
+  top: 1.05em;
+  right: -0.3em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+          transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  -webkit-transition-property: opacity, filter, -webkit-filter;
+          transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 26px;
+  height: 2px;
+  background-color: #ff64c4;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+          transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-property: -webkit-transform, -webkit-transform;
+          transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -6px;
+}
+
+.hamburger-inner::after {
+  bottom: -6px;
+}
+
+/*
+ * 3DX
+ */
+.hamburger--3dx .hamburger-box {
+  -webkit-perspective: 80px;
+  perspective: 80px;
+}
+
+.hamburger--3dx .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.hamburger--3dx.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--3dx.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/*
+ * 3DX Reverse
+ */
+.hamburger--3dx-r .hamburger-box {
+  -webkit-perspective: 80px;
+  perspective: 80px;
+}
+
+.hamburger--3dx-r .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx-r.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.hamburger--3dx-r.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--3dx-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/*
+ * 3DY
+ */
+.hamburger--3dy .hamburger-box {
+  -webkit-perspective: 80px;
+  perspective: 80px;
+}
+
+.hamburger--3dy .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dy.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+.hamburger--3dy.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--3dy.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/*
+ * 3DY Reverse
+ */
+.hamburger--3dy-r .hamburger-box {
+  -webkit-perspective: 80px;
+  perspective: 80px;
+}
+
+.hamburger--3dy-r .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dy-r.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.hamburger--3dy-r.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--3dy-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/*
+ * Arrow
+ */
+.hamburger--arrow.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+.hamburger--arrow.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+/*
+ * Arrow Right
+ */
+.hamburger--arrow-r.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+.hamburger--arrow-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
